@@ -8,12 +8,14 @@
 class BitlyUser 
 	constructor: (@login, @bitly) ->
 
+	warnForLogin: () ->
+
 ####################################################
 # User Info / History
 
 	getInfo: (callback) ->
 		if @login
-			@bitly.getInfoForUser @login, callback
+			@bitly.getInfoForUser {login:@login}, callback
 		else
 			@bitly.getInfoForUser null, callback
 

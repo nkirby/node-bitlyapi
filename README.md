@@ -28,3 +28,20 @@ You can then either authenticate using your username and password
 or if you know your OAuth access_token, you can simply call:
 
 	Bitly.setAccessToken(access_token);
+
+## Bitly API
+
+Each of the public Bitly API endpoints are mapped and available with the following method signature
+
+	Bitly.[method name](parameters, callback(error, response){
+
+	});
+
+Where parameters is a key-value object {} according to Bitly's API documentation.
+
+#### Data APIs
+
+	getHighvalueLinks
+	- /v3/highvalue
+
+## Helper Objects
