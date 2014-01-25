@@ -103,6 +103,7 @@ This project was created by Nathaniel Kirby
 [@thenatekirby](http://twitter.com/thenatekirby "Nate Kirby on Twitter")
 
 Despite being Bitly's iOS developer, this project doesn't mean that
+
 	a) I know anything more or less about iOS because of it.
 	b) Or, inversely, that I know more or less about JavaScript, CoffeeScript or whatever else script is coming up next.
 	c) That Bitly approves, condones, supports or even acknowledge this project.
