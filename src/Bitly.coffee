@@ -79,110 +79,388 @@ class Bitly
 ####################################################
 
 ####################################################
+# Data APIs
+# GET /v3/highvalue
+
+	getHighvalueLinks: (params, callback) ->
+		@get "/v3/highvalue", params, callback
+
+####################################################
+# GET /v3/search
+
+	search: (params, callback) ->
+		@get "/v3/search", params, callback
+
+####################################################
+# GET /v3/realtime/bursting_phrases
+
+	getRealtimeBurstingPhrases: (params, callback) ->
+		@get "/v3/realtime/bursting_phrases", params, callback
+
+####################################################
+# GET /v3/realtime/hot_phrases
+
+	getRealtimeHotPhrases: (params, callback) ->
+		@get "/v3/realtime/hot_phrases", params, callback
+
+####################################################
+# GET /v3/realtime/clickrate
+
+	getRealtimeClickrate: (params, callback) ->
+		@get "/v3/realtime/clickrate", params, callback
+
+####################################################
+# GET /v3/link/info
+
+	getLinkFullInfo: (params, callback) ->
+		@get "/v3/link/info", params, callback
+
+####################################################
+# GET /v3/link/content
+	
+	getLinkContent: (params, callback) ->
+		@get "/v3/link/content", params, callback
+
+####################################################
+# GET /v3/link/category
+
+	getLinkCategory: (params, callback) ->
+		@get "/v3/link/category", params, callback
+
+####################################################
+# GET /v3/link/social
+
+	getLinkSocial: (params, callback) ->
+		@get "/v3/link/social", params, callback
+
+####################################################
+# GET /v3/link/location
+
+	getLinkLocation: (params, callback) ->
+		@get "/v3/link/location", params, callback
+
+####################################################
+# GET /v3/link/language
+
+	getLinkLanguage: (params, callback) ->
+		@get "/v3/link/language", params, callback
+
+####################################################
+# Links
+# GET /v3/expand
+
+	expand: (params, callback) ->
+		@get "/v3/expand", params, callback
+
+####################################################
+# GET /v3/info
+
+	getLinkInfo: (params, callback) ->
+		@get "/v3/info", params, callback
+
+####################################################
+# GET /v3/link/lookup
+
+	linkLookup: (params, callback) ->
+		@get "/v3/link/lookup", params, callback
+
+####################################################
+# GET /v3/shorten
+
+	shorten: (params, callback) ->
+		@get "/v3/shorten", params, callback
+
+####################################################
+# GET /v3/user/link_edit
+
+	userEditLink: (params, callback) ->
+		# edited = []
+		# for key, value of updatedParams
+		# 	edited.push(key)
+		# params = updatedParams
+		# params.edit = edited.join ','
+		@get "/v3/user/link_edit", params, callback
+
+####################################################
+# GET /v3/user/link_lookup
+
+	userLookupLink: (params, callback) ->
+		@get "/v3/user/link_lookup", params, callback
+
+####################################################
+# GET /v3/user/link_save
+
+	userSaveLink: (params, callback) ->
+		@get "/v3/user/link_save", params, callback
+
+####################################################
+# GET /v3/user/save_custom_domain_keyword
+	
+	userSaveCustomDomainKeyword: (params, callback) ->
+		@get "/v3/user/save_custom_domain_keyword", params, callback
+
+####################################################
 # -- User Info/History --
 # GET: /v3/oauth/app
 
-	getInfoAboutApp: (app_client_id = @config.client_id, callback) ->
+	getAppInfo: (app_client_id = @config.client_id, callback) ->
 		@get "/v3/oauth/app", {client_id:app_client_id}, callback
 
 ####################################################
 # GET /v3/user/info
 
-	getInfoForUser: (login, callback) ->
-		if typeof login is "string"
-			@get "/v3/user/info", {login:login}, callback
-		else
-			@get "/v3/user/info", login, callback
+	getUserInfo: (login, callback) ->
+		@get "/v3/user/info", login, callback
+		# if typeof login is "string"
+		# 	@get "/v3/user/info", {login:login}, callback
+		# else
 
 ####################################################
 # GET /v3/user/link_history
 
-	getLinkHistoryForUser: (params, callback) ->
+	getUserLinkHistory: (params, callback) ->
 		@get "/v3/user/link_history", params, callback
 
 ####################################################
 # GET /v3/user/network_history
 
-	getNetworkHistoryForUser: (params, callback) ->
+	getUserNetworkHistory: (params, callback) ->
 		@get "/v3/user/network_history", params, callback
 
 ####################################################
 # GET /v3/user/tracking_domain_list
 
-	getTrackingDomainsForUser: (params, callback) ->
+	getUserTrackingDomains: (params, callback) ->
 		@get "/v3/user/tracking_domain_list", params, callback
 
 ####################################################
 # -- User Metrics --
 # GET /v3/user/clicks
 
-	getClicksForUser: (params, callback) ->
+	getUserClicks: (params, callback) ->
 		@get "/v3/user/clicks", params, callback
 
 ####################################################
 # GET /v3/user/countries
 
-	getCountriesForUser: (params, callback) ->
+	getUserCountries: (params, callback) ->
 		@get "/v3/user/countries", params, callback
 
 ####################################################
 # GET /v3/user/popular_earned_by_clicks
 
-	getPopularEarnedByClicksForUser: (params, callback) ->
+	getUserPopularEarnedByClicks: (params, callback) ->
 		@get "/v3/user/popular_earned_by_clicks", params, callback
 
 ####################################################
 # GET /v3/user/popular_earned_by_shortens
 
-	getPopularEarnedByShortensForUser: (params, callback) ->
+	getUserPopularEarnedByShortens: (params, callback) ->
 		@get "/v3/user/popular_earned_by_shortens", params, callback
 
 ####################################################
 # GET /v3/user/popular_links
 
-	getPopularLinksForUser: (params, callback) ->
+	getUserPopularLinks: (params, callback) ->
 		@get "/v3/user/popular_links", params, callback
 
 ####################################################
 # GET /v3/user/popular_owned_by_clicks
 
-	getPopularOwnedByClicksForUser: (params, callback) ->
+	getUserPopularOwnedByClicks: (params, callback) ->
 		@get "/v3/user/popular_owned_by_clicks", params, callback
 
 ####################################################
 # GET /v3/user/popular_owned_by_shortens
 
-	getPopularOwnedByShortensForUser: (params, callback) ->
+	getUserPopularOwnedByShortens: (params, callback) ->
 		@get "/v3/user/popular_owned_by_shortens", params, callback
 
 ####################################################
 # GET /v3/user/referrers
 
-	getReferrersForUser: (params, callback) ->
+	getUserReferrers: (params, callback) ->
 		@get "/v3/user/referrers", params, callback
 
 ####################################################
 # GET /v3/user/referring_domains
 
-	getReferringDomainsForUser: (params, callback) ->
+	getUserReferringDomains: (params, callback) ->
 		@get "/v3/user/referring_domains", params, callback
 
 ####################################################
 # GET /v3/user/share_counts
 
-	getShareCountsForUser: (params, callback) ->
+	getUserShareCounts: (params, callback) ->
 		@get "/v3/user/share_counts", params, callback
 
 ####################################################
 # GET /v3/user/share_counts_by_share_type
 
-	getShareCountsByShareTypeForUser: (params, callback) ->
+	getUserShareCountsByShareType: (params, callback) ->
 		@get "/v3/user/share_counts_by_share_type", params, callback
 
 ####################################################
 # GET /v3/user/shorten_counts
 
-	getShortenCountsForUser: (params, callback) ->
+	getUserShortenCounts: (params, callback) ->
 		@get "/v3/user/shorten_counts", params, callback
+
+####################################################
+# -- Organization Metrics --
+# GET /v3/organization/brand_messages
+
+	getOrganizationBrandMessages: (params, callback) ->
+		@get "/v3/organization/brand_messages", params, callback
+
+####################################################
+# GET /v3/organization/intersecting_links
+
+	getOrganizationIntersectingLinks: (params, callback) ->
+		@get "/v3/organization/intersecting_links", params, callback
+
+####################################################
+# GET /v3/organization/leaderboard
+
+	getOrganizationLeaderboard: (params, callback) ->
+		@get "/v3/organization/leaderboard", params, callback
+
+####################################################
+# GET /v3/organization/missed_opportunities
+
+	getOrganizationMissedOpportunities: (params, callback) ->
+		@get "/v3/organization/missed_opportunities", params, callback
+
+####################################################
+# -- Bundles --
+# GET /v3/bundle/archive
+
+	archiveBundle: (params, callback) ->
+		@get "/v3/bundle/archive", params, callback
+
+####################################################
+# GET /v3/bundle/bundles_by_user
+
+	bundlesByUser: (params, callback) ->
+		@get "/v3/bundle/bundles_by_user", params, callback
+
+####################################################
+# GET /v3/bundle/clone
+
+	cloneBundle: (params, callback) ->
+		@get "/v3/bundle/clone", params, callback
+
+####################################################
+# GET /v3/bundle/collaborator_add
+
+	addCollaboratorToBundle: (params, callback) ->
+		@get "/v3/bundle/collaborator_add", params, callback
+
+####################################################
+# GET /v3/bundle/collaborator_remove
+
+	removeCollaboratorFromBundle: (params, callback) ->
+		@get "/v3/bundle/collaborator_remove", params, callback
+
+####################################################
+# GET /v3/bundle/contents
+
+	getBundleContents: (params, callback) ->
+		@get "/v3/bundle/contents", params, callback
+
+####################################################
+# GET /v3/bundle/create
+
+	createBundle: (params, callback) ->
+		@get "/v3/bundle/create", params, callback
+
+####################################################
+# GET /v3/bundle/edit
+
+	editBundle: (params, callback) ->
+		@get "/v3/bundle/edit", params, callback
+
+####################################################
+# GET /v3/bundle/link_add
+
+	addLinkToBundle: (params, callback) ->
+		@get "/v3/bundle/link_add", params, callback
+
+####################################################
+# GET /v3/bundle/link_comment_add
+
+	addCommentToBundleLink: (params, callback) ->
+		@get "/v3/bundle/link_comment_add", params, callback
+
+####################################################
+# GET /v3/bundle/link_comment_edit
+
+	editBundleLinkComment: (params, callback) ->
+		@get "/v3/bundle/link_comment_edit", params, callback
+
+####################################################
+# GET /v3/bundle/link_comment_remove
+
+	removeBundleLinkComment: (params, callback) ->
+		@get "/v3/bundle/link_comment_remove", params, callback
+
+####################################################
+# GET /v3/bundle/link_edit
+
+	editBundleLink: (params, callback) ->
+		@get "/v3/bundle/link_edit", params, callback
+
+####################################################
+# GET /v3/bundle/link_remove
+
+	removeBundleLink: (params, callback) ->
+		@get "/v3/bundle/link_remove", params, callback
+
+####################################################
+# GET /v3/bundle/link_reorder
+
+	reorderBundleLink: (params, callback) ->
+		@get "/v3/bundle/link_reorder", params, callback
+
+####################################################
+# GET /v3/bundle/pending_collaborator_remove
+
+	removePendingCollaboratorFromBundle: (params, callback) ->
+		@get "/v3/bundle/pending_collaborator_remove", params, callback
+
+####################################################
+# GET /v3/bundle/reorder
+
+	reorderBundle: (params, callback) ->
+		@get "/v3/bundle/reorder", params, callback
+
+####################################################
+# GET /v3/bundle/view_count
+
+	getBundleViewCount: (params, callback) ->
+		@get "/v3/bundle/view_count", params, callback
+
+####################################################
+# GET /v3/user/bundle_history
+
+	getUserBundleHistory: (params, callback) ->
+		@get "/v3/user/bundle_history", params, callback
+
+####################################################
+# -- Domains --
+# GET /v3/bitly_pro_domain
+
+	getBitlyProDomain: (params, callback) ->
+		@get "/v3/bitly_pro_domain", params, callback
+
+# GET /v3/user/tracking_domain_clicks
+
+	getTrackingDomainClicks: (params, callback) ->
+		@get "/v3/user/tracking_domain_clicks", params, callback
+
+# GET /v3/user/tracking_domain_shorten_counts
+
+	getTrackingDomainShortens: (params, callback) ->
+		@get "/v3/user/tracking_domain_shorten_counts", params, callback
 
 module.exports = Bitly;

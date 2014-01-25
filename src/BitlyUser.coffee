@@ -20,49 +20,49 @@ class BitlyUser
 	getLinkHistory: (params, callback) ->
 		if @login
 			params.user = @login
-		@bitly.getLinkHistoryForUser params, callback
+		@bitly.getUserLinkHistory params, callback
 
 	getNetworkHistory: (params, callback) ->
-		@bitly.getNetworkHistoryForUser params, callback
+		@bitly.getUserNetworkHistory params, callback
 
 	getTrackingDomains: (params, callback) ->
-		@bitly.getTrackingDomainsForUser params, callback
+		@bitly.getUserTrackingDomains params, callback
 
 ####################################################
 # User Metrics
 
 	getClicks: (params, callback) ->
-		@bitly.getClicksForUser params, callback
+		@bitly.getUserClicks params, callback
 
 	getCountries: (params, callback) ->
-		@bitly.getCountriesForUser params, callback
+		@bitly.getUserCountries params, callback
 
 	getPopularEarnedByClicks: (params, callback) ->
-		@bitly.getPopularEarnedByClicksForUser params, callback
+		@bitly.getUserPopularEarnedByClicks params, callback
 
 	getPopularEarnedByShortens: (params, callback) ->
-		@bitly.getPopularEarnedByShortensForUser params, callback
+		@bitly.getUserPopularEarnedByShortens params, callback
 
 	getPopularLinks: (params, callback) ->
-		@bitly.getPopularLinksForUser params, callback
+		@bitly.getUserPopularLinks params, callback
 
 	getPopularOwnedByClicks: (params, callback) ->
-		@bitly.getPopularOwnedByClicksForUser params, callback
+		@bitly.getUserPopularOwnedByClicks params, callback
 
 	getPopularOwnedByShortens: (params, callback) ->
-		@bitly.getPopularOwnedByShortensForUser params, callback
+		@bitly.getUserPopularOwnedByShortens params, callback
 
 	getReferrers: (params, callback) ->
-		@bitly.getReferrersForUser params, callback
+		@bitly.getUserReferrers params, callback
 
 	getReferringDomains: (params, callback) ->
-		@bitly.getReferringDomainsForUser params, callback
+		@bitly.getUserReferringDomains params, callback
 
-	getShareCountsForUser: (params, callback) ->
-		@bitly.getShareCountsForUser params, callback
+	getShareCounts: (params, callback) ->
+		@bitly.getUserShareCounts params, callback
 
 	getShareCountsByShareType: (params, callback) ->
-		@bitly.getShareCountsByShareTypeForUser params, callback
+		@bitly.getUserShareCountsByShareType params, callback
 
 	getShortenCounts: (params, callback) ->
-		@bitly.getShortenCountsForUser params, callback
+		@bitly.getUserShortenCounts params, callback
