@@ -97,7 +97,9 @@ For more information about a BitlyBundleLink - Wiki
 ## Credits & Such
 
 This project was created by Nathaniel Kirby
+
 [nate@projectspong.com](mailto:nate@projectspong.com "nate@projectspong.com")
+
 [@thenatekirby](http://twitter.com/thenatekirby "Nate Kirby on Twitter")
 
 Despite being Bitly's iOS developer, this project doesn't mean that
