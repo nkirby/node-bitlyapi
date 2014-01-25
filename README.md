@@ -13,7 +13,7 @@ node-bitlyapi requires both the btoa and request node modules (installed via NPM
 node-bitlyapi uses Bitly's OAuth implementation, so you'll need to register an OAuth application with them.
 [Register a Bitly OAuth app](https://bitly.com/a/oauth_apps "Bitly OAuth Apps")
 
-	var BitlyAPI = require("node-bitly");
+	var BitlyAPI = require("node-bitlyapi");
 	var Bitly = new BitlyAPI({
 		client_id: "Something",
 		client_secret: "Something"	
@@ -45,110 +45,52 @@ For Example:
 
 Where parameters is a key-value object {} according to Bitly's API documentation. 
 
-The following is a listing of all implemented endpoings, along with their relative path to the Bitly API
+To see the full mapping of the Bitly API, visit [The Wiki](https://github.com/nkirby/node-bitlyapi/wiki/The-Bitly-Object "The Bitly Object Wiki")
 
-### Data APIs
+## Helpers
 
-/v3/highvalue
+To make navigating the Bitly API a bit easier, a handful of small wrapper objects & methods have been provided to make your life a bit easier. 
 
-	Bitly.getHighvalueLinks()
+### Shortening
 
-/v3/search
+Since the vast majority of Bitly's usage is through shortening, I've provided a simpler alternative to the standard Bitly.shorten mapping:
 
-	Bitly.search()
+	Bitly.shortenLink("https://github.com/nkirby/node-bitlyapi", function(err, results) {
 
-/v3/realtime/bursting_phrases
+	});
 
-	Bitly.getRealtimeBurstingPhrases()
+### Objects
 
-/v3/realtime/hot_phrases
+The following objects are provided to wrap the API in a friendlier manner
 
-	Bitly.getRealtimeHotPhrases()
-
-/v3/realtime/clickrate
-
-	Bitly.getRealtimeClickrate()
-
-/v3/link/info
-
-	Bitly.getLinkFullInfo()
-
-/v3/link/content
-
-	Bitly.getLinkContent()
-
-/v3/link/category
+#### BitlyUser
 	
-	Bitly.getLinkCategory()
+	Bitly.user()
+	Bitly.user('login')
+	Bitly.user('login').getLinkHistory(null, function(err, results) {
+		// Gets the public link history of "login"
+	});
 
-/v3/link/social
+For more information about a BitlyUser - Wiki
 
-	Bitly.getLinkSocial()
+#### BitlyLink
 
-/v3/link/location
+	Bitly.link('http://bit.ly/1eOHYrA')
+	Bitly.link('http://bit.ly/1eOHYrA').getInfo(function(err, results) {
 
-	Bitly.getLinkLocation()
+	});
 
-/v3/link/language
+For more information about a BitlyLink - Wiki
 
-	Bitly.getLinkLanguage()
+#### BitlyBundle
 
-### Links
+	Bitly.bundle([TBD])
 
-/v3/expand
+For more information about a BitlyBundle - Wiki
 
-	Bitly.expand()
+#### BitlyBundleLink
 
-/v3/info
+	Bitly.bundleLink([TBD])
 
-	Bitly.getLinkInfo()
+For more information about a BitlyBundleLink - Wiki
 
-/v3/link/lookup
-
-	Bitly.linkLookup()
-
-/v3/shorten
-
-	Bitly.shorten()
-
-/v3/user/link_edit
-
-	Bitly.userEditLink()
-
-/v3/user/link_lookup
-
-	Bitly.userLookupLink()
-
-/v3/user/link_save
-
-	Bitly.userSaveLink()
-	
-/v3/user/save_custom_domain_keyword
-
-	Bitly.userSaveCustomDomainKeyword()
-
-### User Info/History
-# GET: /v3/oauth/app
-
-/v3/oauth/app
-
-	Bitly.getAppInfo()
-
-/v3/user/info
-
-	Bitly.getUserInfo()
-
-/v3/user/link_history
-
-	Bitly.getUserLinkHistory()
-
-/v3/user/network_history
-
-	Bitly.getUserNetworkHistory()
-
-/v3/user/tracking_domain_list
-
-	Bitly.getUserTrackingDomains()
-
-
-## Helper Objects

@@ -75,6 +75,14 @@ class Bitly
 		new BitlyUser login, this
 
 ####################################################
+# Helpers
+####################################################
+
+
+	shortenLink: (link, callback) ->
+		@shorten {longUrl:link}, callback
+		
+####################################################
 # API Calls
 ####################################################
 
@@ -174,11 +182,6 @@ class Bitly
 # GET /v3/user/link_edit
 
 	userEditLink: (params, callback) ->
-		# edited = []
-		# for key, value of updatedParams
-		# 	edited.push(key)
-		# params = updatedParams
-		# params.edit = edited.join ','
 		@get "/v3/user/link_edit", params, callback
 
 ####################################################
@@ -203,17 +206,14 @@ class Bitly
 # -- User Info/History --
 # GET: /v3/oauth/app
 
-	getAppInfo: (app_client_id = @config.client_id, callback) ->
-		@get "/v3/oauth/app", {client_id:app_client_id}, callback
+	getAppInfo: (params, callback) ->
+		@get "/v3/oauth/app", params, callback
 
 ####################################################
 # GET /v3/user/info
 
 	getUserInfo: (login, callback) ->
 		@get "/v3/user/info", login, callback
-		# if typeof login is "string"
-		# 	@get "/v3/user/info", {login:login}, callback
-		# else
 
 ####################################################
 # GET /v3/user/link_history
@@ -453,11 +453,13 @@ class Bitly
 	getBitlyProDomain: (params, callback) ->
 		@get "/v3/bitly_pro_domain", params, callback
 
+####################################################
 # GET /v3/user/tracking_domain_clicks
 
 	getTrackingDomainClicks: (params, callback) ->
 		@get "/v3/user/tracking_domain_clicks", params, callback
 
+####################################################
 # GET /v3/user/tracking_domain_shorten_counts
 
 	getTrackingDomainShortens: (params, callback) ->
