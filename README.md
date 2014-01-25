@@ -37,11 +37,53 @@ Each of the public Bitly API endpoints are mapped and available with the followi
 
 	});
 
-Where parameters is a key-value object {} according to Bitly's API documentation.
+Where parameters is a key-value object {} according to Bitly's API documentation. The following is a listing of all implemented endpoings, followed by their
+relative path to the Bitly API
 
 #### Data APIs
 
-	getHighvalueLinks
-	- /v3/highvalue
+/v3/highvalue
+
+	Bitly.getHighvalueLinks()
+
+/v3/search
+
+	Bitly.search()
+
+/v3/realtime/bursting_phrases
+
+	Bitly.getRealtimeBurstingPhrases()
+
+/v3/realtime/hot_phrases
+
+	Bitly.getRealtimeHotPhrases()
+
+/v3/realtime/clickrate
+
+	Bitly.getRealtimeClickrate()
+
+/v3/link/info
+
+	Bitly.getLinkFullInfo()
+
+/v3/link/content
+
+	Bitly.getLinkContent()
+
+/v3/link/category
+	
+	Bitly.getLinkCategory()
+
+/v3/link/social
+
+	Bitly.getLinkSocial()
+
+/v3/link/location
+
+	Bitly.getLinkLocation()
+
+/v3/link/language
+
+	Bitly.getLinkLanguage()
 
 ## Helper Objects
