@@ -14,6 +14,8 @@
     "grunt-contrib-watch": "~0.5.3"
   },
   "dependencies": {
-    "btoa": "~1.1.1"
+    "btoa": "~1.1.1",
+    "request": "~2.33.0",
+    "querystring": "~0.2.0"
   }
 }

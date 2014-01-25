@@ -19,4 +19,12 @@ node-bitlyapi uses Bitly's OAuth implementation, so you'll need to register an O
 		client_secret: "Something"	
 	});
 
+You can then either authenticate using your username and password
 
+	Bitly.authenticate(username, password, function(err, access_token) {
+		// Returns an error if there was one, or an access_token if there wasn't 
+	});
+
+or if you know your OAuth access_token, you can simply call:
+
+	Bitly.setAccessToken(access_token);

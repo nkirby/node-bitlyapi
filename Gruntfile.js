@@ -11,6 +11,9 @@ module.exports = function(grunt) {
 
 		coffee: {
 			bitly: {
+				options: {
+					join: true
+				},
 				files: {
 					"lib/bitly.js": "src/*.coffee",
 				}
