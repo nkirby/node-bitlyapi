@@ -94,3 +94,16 @@ For more information about a BitlyBundle - Wiki
 
 For more information about a BitlyBundleLink - Wiki
 
+## Credits & Such
+
+This project was created by Nathaniel Kirby
+[nate@projectspong.com](mailto:nate@projectspong.com "nate@projectspong.com")
+[@thenatekirby](http://twitter.com/thenatekirby "Nate Kirby on Twitter")
+
+Despite being Bitly's iOS developer, this project doesn't mean that
+	a) I know anything more or less about iOS because of it.
+	b) Or, inversely, that I know more or less about JavaScript, CoffeeScript or whatever else script is coming up next.
+	c) That Bitly approves, condones, supports or even acknowledge this project.
+
+Feel free to use this to make great NodeJS apps using Bitly's API. This project has no affiliation with Bitly, and your usage of their API is subject to their
+terms and conditions. Don't be a jackass, or a spammer...or a jackass spammer.
