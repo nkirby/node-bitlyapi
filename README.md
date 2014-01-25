@@ -29,7 +29,7 @@ or if you know your OAuth access_token, you can simply call:
 
 	Bitly.setAccessToken(access_token);
 
-## Bitly API
+## The Bitly Object
 
 Each of the public Bitly API endpoints are mapped and available with the following method signature
 
@@ -37,10 +37,17 @@ Each of the public Bitly API endpoints are mapped and available with the followi
 
 	});
 
-Where parameters is a key-value object {} according to Bitly's API documentation. The following is a listing of all implemented endpoings, followed by their
-relative path to the Bitly API
+For Example:
 
-#### Data APIs
+	Bitly.shorten({longUrl:"https://github.com/nkirby/node-bitlyapi"}, function(err, results) {
+		// Do something with your new, shorter url...
+	});
+
+Where parameters is a key-value object {} according to Bitly's API documentation. 
+
+The following is a listing of all implemented endpoings, along with their relative path to the Bitly API
+
+### Data APIs
 
 /v3/highvalue
 
@@ -85,5 +92,63 @@ relative path to the Bitly API
 /v3/link/language
 
 	Bitly.getLinkLanguage()
+
+### Links
+
+/v3/expand
+
+	Bitly.expand()
+
+/v3/info
+
+	Bitly.getLinkInfo()
+
+/v3/link/lookup
+
+	Bitly.linkLookup()
+
+/v3/shorten
+
+	Bitly.shorten()
+
+/v3/user/link_edit
+
+	Bitly.userEditLink()
+
+/v3/user/link_lookup
+
+	Bitly.userLookupLink()
+
+/v3/user/link_save
+
+	Bitly.userSaveLink()
+	
+/v3/user/save_custom_domain_keyword
+
+	Bitly.userSaveCustomDomainKeyword()
+
+### User Info/History
+# GET: /v3/oauth/app
+
+/v3/oauth/app
+
+	Bitly.getAppInfo()
+
+/v3/user/info
+
+	Bitly.getUserInfo()
+
+/v3/user/link_history
+
+	Bitly.getUserLinkHistory()
+
+/v3/user/network_history
+
+	Bitly.getUserNetworkHistory()
+
+/v3/user/tracking_domain_list
+
+	Bitly.getUserTrackingDomains()
+
 
 ## Helper Objects
