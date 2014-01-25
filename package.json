@@ -1,0 +1,19 @@
+{
+  "name": "node-bitly",
+  "version": "0.0.1",
+  "description": "A NodeJS interface for the public Bitly API",
+  "homepage": "http://www.projectspong.com/",
+  "author": "Nathaniel Kirby <nate@projectspong.com> (http://www.projectspong.com/)",
+  "main": "lib/bitly",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-coffee": "~0.8.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "dependencies": {
+    "btoa": "~1.1.1"
+  }
+}
