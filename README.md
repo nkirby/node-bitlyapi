@@ -6,7 +6,11 @@ For more information about the Bitly API: [dev.bitly.com](http://dev.bitly.com "
 
 ### Dependencies
 
-node-bitlyapi requires both the btoa and request node modules (installed via NPM)
+node-bitlyapi requires the btoa, request and querystring node modules (installed via NPM)
+
+### Installation
+
+TBD, probably just npm install node-bitlyapi, but haven't gotten that far yet.
 
 ## Usage
 
@@ -108,5 +112,4 @@ Despite being Bitly's iOS developer, this project doesn't mean that
 	b) Or, inversely, that I know more or less about JavaScript, CoffeeScript or whatever else script is coming up next.
 	c) That Bitly approves, condones, supports or even acknowledge this project.
 
-Feel free to use this to make great NodeJS apps using Bitly's API. This project has no affiliation with Bitly, and your usage of their API is subject to their
-terms and conditions. Don't be a jackass, or a spammer...or a jackass spammer.
+Feel free to use this to make great NodeJS apps using Bitly's API. Your usage of their API is subject to their terms and conditions. Don't be a jackass, or a spammer...or a jackass spammer.
