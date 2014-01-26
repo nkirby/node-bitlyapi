@@ -68,3 +68,14 @@ class BitlyUser
 
 	getShortenCounts: (params, callback) ->
 		@bitly.getUserShortenCounts params, callback
+
+####################################################
+# Bundles
+
+	getBundles: (params, callback) ->
+		if @login
+			params.user = @login
+			@bitly.bundlesByUser params, callback
+		else
+			@bitly.getUserBundleHistory params, callback
+			
