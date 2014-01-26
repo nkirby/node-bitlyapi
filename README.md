@@ -90,7 +90,7 @@ For more information about a BitlyUser - [Wiki](https://github.com/nkirby/node-b
 
 	});
 
-For more information about a BitlyLink - Wiki
+For more information about a BitlyLink - [Wiki](https://github.com/nkirby/node-bitlyapi/wiki/BitlyLink "BitlyLink")
 
 #### BitlyBundle
 
