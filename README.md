@@ -16,6 +16,9 @@ It isn't in NPM's directories yet, but:
 
 	npm install BitlyAPI
 
+### Version
+
+The current published version of node-bitlyapi is 0.4.0. It is API complete, but missing some of the helper objects I intend to create.
 
 ## Usage
 

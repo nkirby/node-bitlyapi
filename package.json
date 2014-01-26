@@ -1,7 +1,7 @@
 {
   "name": "BitlyAPI",
-  "version": "0.0.1",
-  "description": "A NodeJS interface for the public Bitly API",
+  "version": "0.4.0",
+  "description": "An OAuth, endpoint-complete, NodeJS interface for the public Bitly API",
   "homepage": "http://www.projectspong.com/portfolio-type/nodebitlyapi/",
   "author": {
     "name": "Nathaniel Kirby",

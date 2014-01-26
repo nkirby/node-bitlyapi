@@ -8,8 +8,6 @@
 class BitlyUser 
 	constructor: (@login, @bitly) ->
 
-	warnForLogin: () ->
-
 ####################################################
 # User Info / History
 
@@ -78,4 +76,3 @@ class BitlyUser
 			@bitly.bundlesByUser params, callback
 		else
 			@bitly.getUserBundleHistory params, callback
-			
