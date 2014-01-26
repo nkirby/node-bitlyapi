@@ -10,14 +10,17 @@ node-bitlyapi requires the btoa, request and querystring node modules (installed
 
 ### Installation
 
-TBD, probably just npm install node-bitlyapi, but haven't gotten that far yet.
+It isn't in NPM's directories yet, but:
+
+	npm install BitlyAPI
+
 
 ## Usage
 
 node-bitlyapi uses Bitly's OAuth implementation, so you'll need to register an OAuth application with them.
 [Register a Bitly OAuth app](https://bitly.com/a/oauth_apps "Bitly OAuth Apps")
 
-	var BitlyAPI = require("node-bitlyapi");
+	var BitlyAPI = require("BitlyAPI");
 	var Bitly = new BitlyAPI({
 		client_id: "Something",
 		client_secret: "Something"	

@@ -9,7 +9,7 @@ btoa = require 'btoa'
 request = require 'request'
 querystring = require 'querystring'
 
-class Bitly
+class BitlyAPI
 	request_config: 
 		endpoint: "https://api-ssl.bitly.com"
 
@@ -17,6 +17,9 @@ class Bitly
 		@checkConfig()
 
 	checkConfig: () ->
+		if not @config
+			throw "Bitly config error: no config at time of creation"
+
 		if not @config.client_id or not @config.client_secret 
 			throw "Bitly config error: missing client_id or client_secret"
 
@@ -81,7 +84,7 @@ class Bitly
 
 	shortenLink: (link, callback) ->
 		@shorten {longUrl:link}, callback
-		
+
 ####################################################
 # API Calls
 ####################################################
@@ -465,4 +468,4 @@ class Bitly
 	getTrackingDomainShortens: (params, callback) ->
 		@get "/v3/user/tracking_domain_shorten_counts", params, callback
 
-module.exports = Bitly;
+module.exports = BitlyAPI;

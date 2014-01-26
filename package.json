@@ -1,10 +1,10 @@
 {
-  "name": "node-bitly",
+  "name": "BitlyAPI",
   "version": "0.0.1",
   "description": "A NodeJS interface for the public Bitly API",
   "homepage": "http://www.projectspong.com/",
   "author": "Nathaniel Kirby <nate@projectspong.com> (http://www.projectspong.com/)",
-  "main": "lib/bitly",
+  "main": "lib/bitly.js",
   "engines": {
     "node": ">= 0.8.0"
   },
