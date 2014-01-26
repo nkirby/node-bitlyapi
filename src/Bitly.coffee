@@ -14,14 +14,6 @@ class BitlyAPI
 		endpoint: "https://api-ssl.bitly.com"
 
 	constructor: (@config) ->
-		@checkConfig()
-
-	checkConfig: () ->
-		if not @config
-			throw "Bitly config error: no config at time of creation"
-
-		if not @config.client_id or not @config.client_secret 
-			throw "Bitly config error: missing client_id or client_secret"
 
 	setAccessToken: (@access_token) ->
 		return this
@@ -49,6 +41,9 @@ class BitlyAPI
 # POST: /oauth/access_token
 
 	authenticate: (username, password, callback) ->
+		if not @config or not @config.client_id or not @config.client_secret
+			throw "Bitly config error: you must specify a client_id and client_secret before authenticating a user."
+		
 		auth = "Basic "+btoa(@config.client_id+":"+@config.client_secret)
 		console.log auth
 		request(
