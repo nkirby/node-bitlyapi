@@ -25,7 +25,7 @@ The current published version of node-bitlyapi is 0.4.0. It is API complete, but
 node-bitlyapi uses Bitly's OAuth implementation, so you'll need to register an OAuth application with them.
 [Register a Bitly OAuth app](https://bitly.com/a/oauth_apps "Bitly OAuth Apps")
 
-	var BitlyAPI = require("BitlyAPI");
+	var BitlyAPI = require("node-bitlyapi");
 	var Bitly = new BitlyAPI({
 		client_id: "Something",
 		client_secret: "Something"	
