@@ -1,4 +1,4 @@
-<img src="http://www.projectspong.com/wp-content/uploads/2014/01/nodebitlyapi2.png" height="200" width="200"/>
+<img src="http://www.projectspong.com/wp-content/uploads/2014/01/nodebitlyapi2.png" height="200" width="300"/>
 
 # node-bitlyapi
 
