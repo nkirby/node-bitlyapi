@@ -12,9 +12,7 @@ node-bitlyapi requires the btoa, request and querystring node modules (installed
 
 ### Installation
 
-It isn't in NPM's directories yet, but:
-
-	npm install BitlyAPI
+	npm install node-bitlyapi
 
 ### Version
 
