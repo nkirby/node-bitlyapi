@@ -1,3 +1,5 @@
+<img src="http://www.projectspong.com/wp-content/uploads/2014/01/nodebitly3.png" height="200" width="200"/>
+
 # node-bitlyapi
 
 A NodeJS interface for the public Bitly API
