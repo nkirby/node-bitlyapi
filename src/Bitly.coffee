@@ -206,6 +206,60 @@ class BitlyAPI
 		@get "/v3/user/save_custom_domain_keyword", params, callback
 
 ####################################################
+# Link Metrics
+# GET /v3/link/clicks
+
+	getLinkClicks: (params, callback) ->
+		@get "/v3/link/clicks", params, callback
+
+####################################################
+# GET /v3/link/countries
+
+	getLinkCountries: (params, callback) ->
+		@get "/v3/link/countries", params, callback
+
+####################################################
+# GET /v3/link/encoders
+
+	getLinkEncoders: (params, callback) ->
+		@get "/v3/link/encoders", params, callback
+
+####################################################
+# GET /v3/link/encoders_by_count
+	getLinkEncodersByCount: (params, callback) ->
+		@get "/v3/link/encoders_by_count", params, callback
+
+####################################################
+# GET /v3/link/encoders_count
+
+	getLinkEncodersCount: (params, callback) ->
+		@get "/v3/link/encoders_count", params, callback
+
+####################################################
+# GET /v3/link/referrers
+
+	getLinkReferrers: (params, callback) ->
+		@get "/v3/link/referrers", params, callback
+
+####################################################
+# GET /v3/link/referrers_by_domain
+
+	getLinkReferrersByDomain: (params, callback) ->
+		@get "/v3/link/referrers_by_domain", params, callback
+
+####################################################
+# GET /v3/link/referring_domains
+
+	getLinkReferringDomains: (params, callback) ->
+		@get "/v3/link/referring_domains", params, callback
+
+####################################################
+# GET /v3/link/shares
+
+	getLinkShares: (params, callback) ->
+		@get "/v3/link/shares", params, callback
+
+####################################################
 # -- User Info/History --
 # GET: /v3/oauth/app
 

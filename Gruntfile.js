@@ -6,18 +6,17 @@
 // ================================================
 
 module.exports = function(grunt) {
-	banner = "// ================================================\n" +
-				"// BitlyAPI\n" +
-				"// A NodeJS interface for the Public Bitly API\n" +
-				"// Nathaniel Kirby <nate@projectspong.com\n" +
-				"// https://github.com/nkirby/node-bitlyapi\n" +
-				"// ================================================\n";
-
 	grunt.initConfig({
+	    pkg: grunt.file.readJSON('package.json'),
+		banner: "// ================================================\n" +
+				"// <%= pkg.name %> - version <%= pkg.version %> \n" +
+				"// <%= pkg.description %>\n" +
+				"// <%= pkg.author.name %> (<%= pkg.author.email %>)\n" +
+				"// <%= pkg.repository.url %>\n" +
+				"// ================================================\n",
 		coffee: {
 			bitly: {
 				options: {
-					banner: banner,
 					join: true
 				},
 				files: {
@@ -30,7 +29,7 @@ module.exports = function(grunt) {
 			bitly: {
 				options: {
 					position: 'top',
-					banner: banner,
+					banner: "<%= banner %>",
 					linebreak: true
 				},
 				files: {

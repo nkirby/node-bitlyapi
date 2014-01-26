@@ -80,7 +80,7 @@ The following objects are provided to wrap the API in a friendlier manner
 		// Gets the public link history of "login"
 	});
 
-For more information about a BitlyUser - Wiki
+For more information about a BitlyUser - [Wiki](https://github.com/nkirby/node-bitlyapi/wiki/BitlyUser "BitlyUser")
 
 #### BitlyLink
 
@@ -93,15 +93,11 @@ For more information about a BitlyLink - Wiki
 
 #### BitlyBundle
 
-	Bitly.bundle([TBD])
-
-For more information about a BitlyBundle - Wiki
+	To Do.
 
 #### BitlyBundleLink
 
-	Bitly.bundleLink([TBD])
-
-For more information about a BitlyBundleLink - Wiki
+	To Do.
 
 ## Credits & Such
 
