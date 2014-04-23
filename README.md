@@ -100,6 +100,10 @@ For more information about a BitlyLink - [Wiki](https://github.com/nkirby/node-b
 
 	To Do.
 
+## Testing
+
+The testing uses [mocha](http://visionmedia.github.io/mocha/).  Run with command: `BITLY_TOKEN=your_token mocha`.
+
 ## Credits & Such
 
 This project was created by Nathaniel Kirby
