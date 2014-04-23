@@ -38,7 +38,8 @@
     "grunt": "~0.4.2",
     "grunt-contrib-coffee": "~0.8.2",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-banner": "~0.2.0"
+    "grunt-banner": "~0.2.0",
+    "chai": "~1.9.1"
   },
   "dependencies": {
     "btoa": "~1.1.1",

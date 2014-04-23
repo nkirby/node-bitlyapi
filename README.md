@@ -45,7 +45,9 @@ Each of the public Bitly API endpoints are mapped and available with the followi
 
 	Bitly.[method name](parameters, callback(error, response){
 
-	});
+	}, options);
+
+The final parameter, options, taken an object, and is totally optional.  It can be used to add any options supported by the request module.  Those options are listed [here](https://github.com/mikeal/request#requestoptions-callback).  Note that any values supplied for `uri` and `method` will be overwritten by the module's internal logic.
 
 For Example:
 
@@ -99,6 +101,10 @@ For more information about a BitlyLink - [Wiki](https://github.com/nkirby/node-b
 #### BitlyBundleLink
 
 	To Do.
+
+## Testing
+
+The testing uses [mocha](http://visionmedia.github.io/mocha/).  Run with command: `BITLY_TOKEN=your_token mocha`.
 
 ## Credits & Such
 
