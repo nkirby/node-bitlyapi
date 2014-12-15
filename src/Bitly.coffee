@@ -45,7 +45,6 @@ class BitlyAPI
 			throw "Bitly config error: you must specify a client_id and client_secret before authenticating a user."
 		
 		auth = "Basic "+btoa(@config.client_id+":"+@config.client_secret)
-		console.log auth
 		request(
 			{
 				uri:@request_config.endpoint+"/oauth/access_token"
@@ -71,6 +70,9 @@ class BitlyAPI
 
 	user: (login) ->
 		new BitlyUser login, this
+
+	link: (link) ->
+		new BitlyLink link, this
 
 ####################################################
 # Helpers
