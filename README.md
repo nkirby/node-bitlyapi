@@ -24,32 +24,32 @@ node-bitlyapi uses Bitly's OAuth implementation, so you'll need to register an O
 [Register a Bitly OAuth app](https://bitly.com/a/oauth_apps "Bitly OAuth Apps")
 
 	var BitlyAPI = require("node-bitlyapi");
-	var Bitly = new BitlyAPI({
+	var bitly = new BitlyAPI({
 		client_id: "Something",
 		client_secret: "Something"	
 	});
 
 You can then either authenticate using your username and password
 
-	Bitly.authenticate(username, password, function(err, access_token) {
+	bitly.authenticate(username, password, function(err, access_token) {
 		// Returns an error if there was one, or an access_token if there wasn't 
 	});
 
 or if you know your OAuth access_token, you can simply call:
 
-	Bitly.setAccessToken(access_token);
+	bitly.setAccessToken(access_token);
 
 ## The Bitly Object
 
 Each of the public Bitly API endpoints are mapped and available with the following method signature
 
-	Bitly.[method name](parameters, callback(error, response){
+	bitly.[method name](parameters, callback(error, response){
 
 	});
 
 For Example:
 
-	Bitly.shorten({longUrl:"https://github.com/nkirby/node-bitlyapi"}, function(err, results) {
+	bitly.shorten({longUrl:"https://github.com/nkirby/node-bitlyapi"}, function(err, results) {
 		// Do something with your new, shorter url...
 	});
 
@@ -65,7 +65,7 @@ To make navigating the Bitly API a bit easier, a handful of small wrapper object
 
 Since the vast majority of Bitly's usage is through shortening, I've provided a simpler alternative to the standard Bitly.shorten mapping:
 
-	Bitly.shortenLink("https://github.com/nkirby/node-bitlyapi", function(err, results) {
+	bitly.shortenLink("https://github.com/nkirby/node-bitlyapi", function(err, results) {
 
 	});
 
@@ -75,9 +75,9 @@ The following objects are provided to wrap the API in a friendlier manner
 
 #### BitlyUser
 	
-	Bitly.user()
-	Bitly.user('login')
-	Bitly.user('login').getLinkHistory(null, function(err, results) {
+	bitly.user()
+	bitly.user('login')
+	bitly.user('login').getLinkHistory(null, function(err, results) {
 		// Gets the public link history of "login"
 	});
 
@@ -85,8 +85,8 @@ For more information about a BitlyUser - [Wiki](https://github.com/nkirby/node-b
 
 #### BitlyLink
 
-	Bitly.link('http://bit.ly/1eOHYrA')
-	Bitly.link('http://bit.ly/1eOHYrA').getInfo(function(err, results) {
+	bitly.link('http://bit.ly/1eOHYrA')
+	bitly.link('http://bit.ly/1eOHYrA').getInfo(function(err, results) {
 
 	});
 
