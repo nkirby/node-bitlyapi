@@ -1,6 +1,6 @@
 {
   "name": "node-bitlyapi",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An OAuth, endpoint-complete, NodeJS interface for the public Bitly API",
   "homepage": "http://www.projectspong.com/portfolio-type/nodebitlyapi/",
   "author": {
