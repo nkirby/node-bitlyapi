@@ -1,24 +1,24 @@
 {
   "name": "node-bitlyapi",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "An OAuth, endpoint-complete, NodeJS interface for the public Bitly API",
   "homepage": "http://www.projectspong.com/portfolio-type/nodebitlyapi/",
   "author": {
     "name": "Nathaniel Kirby",
-    "url":"http://www.projectspong.com",
-    "email":"nate@projectspong.com"
+    "url": "http://www.projectspong.com",
+    "email": "nate@projectspong.com"
   },
   "repository": {
-    "type":"git",
-    "url":"https://github.com/nkirby/node-bitlyapi"
+    "type": "git",
+    "url": "https://github.com/nkirby/node-bitlyapi"
   },
   "bugs": {
-    "url":"https://github.com/nkirby/node-bitlyapi/issues",
-    "email":"nate@projectspong.com"
+    "url": "https://github.com/nkirby/node-bitlyapi/issues",
+    "email": "nate@projectspong.com"
   },
   "licenses": [
     {
-      "type":"MIT",
+      "type": "MIT",
       "url": "https://github.com/nkirby/node-bitlyapi/blob/master/LICENSE"
     }
   ],
@@ -26,7 +26,7 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "keywords":[
+  "keywords": [
     "bitly",
     "shorten",
     "api",
@@ -35,14 +35,14 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "^1.0.3",
+    "grunt-banner": "~0.2.0",
     "grunt-contrib-coffee": "~0.8.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-banner": "~0.2.0"
+    "grunt-contrib-watch": "^1.1.0"
   },
   "dependencies": {
     "btoa": "~1.1.1",
-    "request": "~2.33.0",
-    "querystring": "~0.2.0"
+    "querystring": "~0.2.0",
+    "request": "^2.87.0"
   }
 }
